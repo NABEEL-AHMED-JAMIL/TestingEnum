@@ -46,6 +46,10 @@ public class Professor {
 	
 	@Column(name = "START_DATE", columnDefinition = "DATE DEFAULT CURRENT_DATE")
 	private java.sql.Date startDate;
+	
+	@Temporal(TemporalType.DATE)
+	private java.util.Calendar dob;
+	
 	public int getId() {
 		return id;
 	}
