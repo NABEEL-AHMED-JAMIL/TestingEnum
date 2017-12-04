@@ -39,9 +39,14 @@ public class Professor {
 	@Transient
 	private String phoneNum;
 	
+	@Lob 
+	@Basic(fetch=LAZY)
+	private byte[] picture;
+	// durring post used ad "String".getBytes(); // convert the string data into byte 	
+	
 	public int getId() {
-    return id;
-  }
+		return id;
+	}
 
   public void setId(int id) {
     this.id = id;
