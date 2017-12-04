@@ -44,6 +44,8 @@ public class Professor {
 	private byte[] picture;
 	// durring post used ad "String".getBytes(); // convert the string data into byte 	
 	
+	@Column(name = "START_DATE", columnDefinition = "DATE DEFAULT CURRENT_DATE")
+	private java.sql.Date startDate;
 	public int getId() {
 		return id;
 	}
